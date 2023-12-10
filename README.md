@@ -68,3 +68,39 @@ int main()
     use(1, 3);     // Compile-time error
 }
 ```
+
+You can retrieve the internal value using the `get()` method:
+
+```cpp
+price p{1.0};
+
+double d = p.get();
+```
+
+The list of supported operators is:
+
+```cpp
+template <class In1, class In2 = void>
+struct strong_typedef::operators
+{
+    // For strong_typedef::operators<In1, In2>
+    using add = _operators_undefined;
+    using subtract = _operators_undefined;
+    using multiply = _operators_undefined;
+    using divide = _operators_undefined;
+    using modulo = _operators_undefined;
+    using equal = _operators_undefined;
+    using not_equal = _operators_undefined;
+    using less = _operators_undefined;
+    using less_equal = _operators_undefined;
+    using greater = _operators_undefined;
+    using greater_equal = _operators_undefined;
+    using logical_and = _operators_undefined;
+    using logical_or = _operators_undefined;
+
+    // For strong_typedef::operators<In1>
+    using plus = _operators_undefined;
+    using minus = _operators_undefined;
+    using logical_not = _operators_undefined;
+};
+```
