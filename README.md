@@ -4,7 +4,7 @@ A (yet another) `strong_typedef` implementation for C++.
 
 `strong_typedef`s allow you to create new types that are derived from existing ones, but are not implicitly convertible to them. This allows you to create types that are semantically different, but have the same underlying representation.
 
-Using `strong_typedef`s helps in avoiding some common pitfalls, like accidentally adding a distance to a time or passing a weight to a function that expects a price (where all of could be represented by a `double`).
+Using `strong_typedef`s helps in avoiding some common pitfalls, like accidentally adding a distance to a time or passing a weight to a function that expects a price (where all of those could be represented by a `double`).
 
 This (single-header) library also provides a convenient way of defining common operators for your new types. You can express that it makes sense to multiply a price by a quantity, while preventing the multiplication of two prices.
 
