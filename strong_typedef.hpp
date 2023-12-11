@@ -4,12 +4,8 @@
 
 namespace strong_typedef
 {
-    class _strong_typedef
-    {
-    };
-
     template <typename T, typename Tag>
-    class type : _strong_typedef
+    class type
     {
     public:
         using value_type = T;
