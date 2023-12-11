@@ -27,23 +27,23 @@ Express which operations are allowed and what are their result types:
 
 ```cpp
 template <>
-struct strong_typedef::operators<price, price>
+struct strong_typedef::operators<price, price>    // price □ price
 {
-    using add = price;      // price + price => price
-    using subtract = price; // price - price => price
+    using add = price;                            // price + price => price
+    using subtract = price;                       // price - price => price
 };
 
 template <>
-struct strong_typedef::operators<price, quantity>
+struct strong_typedef::operators<price, quantity> // price □ quantity
 {
-    using multiply = price; // price * quantity => price
-    using divide = price;   // price / quantity => price
+    using multiply = price;                       // price * quantity => price
+    using divide = price;                         // price / quantity => price
 };
 
 template <>
-struct strong_typedef::operators<price>
+struct strong_typedef::operators<price>           // □ price
 {
-    using minus = price;    // -price => price
+    using minus = price;                          // - price => price
 };
 ```
 
