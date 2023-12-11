@@ -84,23 +84,23 @@ template <class In1, class In2 = void>
 struct strong_typedef::operators
 {
     // For strong_typedef::operators<In1, In2>
-    using add = _operators_undefined;
-    using subtract = _operators_undefined;
-    using multiply = _operators_undefined;
-    using divide = _operators_undefined;
-    using modulo = _operators_undefined;
-    using equal = _operators_undefined;
-    using not_equal = _operators_undefined;
-    using less = _operators_undefined;
-    using less_equal = _operators_undefined;
-    using greater = _operators_undefined;
-    using greater_equal = _operators_undefined;
-    using logical_and = _operators_undefined;
-    using logical_or = _operators_undefined;
+    using add = _operator_undefined;
+    using subtract = _operator_undefined;
+    using multiply = _operator_undefined;
+    using divide = _operator_undefined;
+    using modulo = _operator_undefined;
+    using equal = _operator_undefined;
+    using not_equal = _operator_undefined;
+    using less = _operator_undefined;
+    using less_equal = _operator_undefined;
+    using greater = _operator_undefined;
+    using greater_equal = _operator_undefined;
+    using logical_and = _operator_undefined;
+    using logical_or = _operator_undefined;
 
     // For strong_typedef::operators<In1>
-    using plus = _operators_undefined;
-    using minus = _operators_undefined;
-    using logical_not = _operators_undefined;
+    using plus = _operator_undefined;
+    using minus = _operator_undefined;
+    using logical_not = _operator_undefined;
 };
 ```
