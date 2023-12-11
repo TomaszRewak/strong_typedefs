@@ -29,21 +29,21 @@ Express which operations are allowed and what are their result types:
 template <>
 struct strong_typedef::operators<price, price>
 {
-    using add = price;
-    using subtract = price;
+    using add = price;      // price + price => price
+    using subtract = price; // price - price => price
 };
 
 template <>
 struct strong_typedef::operators<price, quantity>
 {
-    using multiply = price;
-    using divide = price;
+    using multiply = price; // price * quantity => price
+    using divide = price;   // price / quantity => price
 };
 
 template <>
 struct strong_typedef::operators<price>
 {
-    using minus = price;
+    using minus = price;    // -price => price
 };
 ```
 
@@ -63,9 +63,9 @@ int main()
     use(price{1}, quantity{3});          // OK
     use(p, quantity{p.get() + v.get()}); // OK, on your own risk
 
-    use(v, p);     // Compile-time error
-    use(p + v, v); // Compile-time error
-    use(1, 3);     // Compile-time error
+    use(v, p);     // Compile-time error (cannot pass a price as a quantity and vice versa)
+    use(p + v, v); // Compile-time error (cannot add quantity to a price)
+    use(1, 3);     // Compile-time error (cannot implicitly convert between a number and price/quantity)
 }
 ```
 
